@@ -59,14 +59,14 @@ export default function SlideDeck() {
         <div className={getSlideClass(1)} data-slide="1">
           <h1>AgroIjara.uz Platformması</h1>
           <p>Traktorlar hám awıl xojalığı texnikaların ańsat arendaǵa beriw hám bron qılıw saytınıń startap modeli</p>
-          <div style={{ fontSize: '4rem', color: 'var(--color-accent)', marginTop: '20px' }}>
+          <div style={{ fontSize: '4rem', color: 'var(--c-gold)', marginTop: '20px' }}>
             <i className="fa-solid fa-tractor"></i>
           </div>
         </div>
 
         {/* Slide 2 */}
         <div className={getSlideClass(2)} data-slide="2">
-          <span className="timeline-month" style={{ backgroundColor: 'var(--color-accent)', color: 'var(--color-primary-dark)', fontSize: '1.1rem', padding: '6px 18px', marginBottom: '24px' }}>
+          <span className="timeline-month" style={{ backgroundColor: 'var(--c-gold)', color: 'var(--c-primary)', fontSize: '1.1rem', padding: '6px 18px', marginBottom: '24px' }}>
             BÓLIM 01
           </span>
           <h2>01. Mashqala hám Sheshim</h2>
@@ -80,14 +80,14 @@ export default function SlideDeck() {
           </div>
           <div className="slide-body">
             <div className="slide-body-split">
-              <div className="slide-card" style={{ borderLeft: '5px solid var(--color-primary)' }}>
-                <h3 style={{ color: 'var(--color-primary)' }}>
+              <div className="slide-card" style={{ borderLeft: '5px solid var(--c-primary)' }}>
+                <h3 style={{ color: 'var(--c-primary)' }}>
                   <i className="fa-solid fa-wheat-awn" style={{ marginRight: '8px' }}></i> Fermerlerdiń Máshqalaları
                 </h3>
                 <p>Máwsim qızǵan waqıtta traktor tabıw qıyın. Bahalar óte qımbat hám dástúriy dellallar (posredniklar) úlken ústeme haqı qosıp tabıp beredi. Sonıń menen birge, texnikanıń sapası hám kelesi kúni kelisiwine hesh kim kepillik bermeydi.</p>
               </div>
-              <div className="slide-card" style={{ borderLeft: '5px solid var(--color-accent)' }}>
-                <h3 style={{ color: 'var(--color-accent-dark)' }}>
+              <div className="slide-card" style={{ borderLeft: '5px solid var(--c-gold)' }}>
+                <h3 style={{ color: 'var(--c-gold-dim)' }}>
                   <i className="fa-solid fa-screwdriver-wrench" style={{ marginRight: '8px' }}></i> Texnika iyeleriniń Máshqalaları
                 </h3>
                 <p>Qımbat bahalı traktorlar máwsimnen basqa waqıtlarda bos turadı. Traktorshılar kóbinese qarıydarlardı tek ǵana tanısları arqalı tabadı, bul bolsa texnikanıń ápiwayı toqtap qalıwına hám dáramattıń azayıwına alıp keledi.</p>

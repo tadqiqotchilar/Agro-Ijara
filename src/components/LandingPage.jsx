@@ -50,7 +50,7 @@ export default function LandingPage({ onLearnMoreClick, onContactClick }) {
           <div className="problems-grid">
             {/* Farmers Problems */}
             <div className="problem-card farmers">
-              <div class="problem-icon-wrapper">
+              <div className="problem-icon-wrapper">
                 <i className="fa-solid fa-wheat-awn"></i>
               </div>
               <h3>Fermerlerdiń Máshqalaları</h3>
@@ -76,7 +76,7 @@ export default function LandingPage({ onLearnMoreClick, onContactClick }) {
               <img src="/assets/solution-app.png" alt="AgroIjara Mobile Application Mockup" />
             </div>
             <div className="solution-content">
-              <div className="hero-tag" style={{ background: 'rgba(44, 104, 73, 0.1)', color: 'var(--color-primary-light)', borderColor: 'rgba(44, 104, 73, 0.2)' }}>
+              <div className="hero-tag" style={{ background: 'color-mix(in oklch, var(--c-primary) 10%, transparent)', color: 'var(--c-primary-light)', borderColor: 'color-mix(in oklch, var(--c-primary) 22%, transparent)' }}>
                 <i className="fa-solid fa-lightbulb"></i>
                 <span>Bizniń Sheshimimiz</span>
               </div>

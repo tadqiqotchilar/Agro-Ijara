@@ -51,7 +51,7 @@ export default function CommissionChart() {
             <div className="chart-bar-container">
               <div className="chart-bar-label">
                 <span>Arnaulı Ofis Brokerligi</span>
-                <span class="percent">10%</span>
+                <span className="percent">10%</span>
               </div>
               <div className="chart-bar-wrapper">
                 <div 

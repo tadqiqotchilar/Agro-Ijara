@@ -123,17 +123,25 @@ export default function Header({ mode, setMode }) {
             >
               Sorawlar
             </a>
+            <div className="mode-switch-wrapper nav-mode-switch">
+              <span className="toggle-label" style={{ color: mode === 'landing' ? 'var(--c-gold-dim)' : 'inherit', fontWeight: mode === 'landing' ? 700 : 500 }}>Sayt rejimi</span>
+              <label className="switch">
+                <input type="checkbox" checked={mode === 'presentation'} onChange={toggleMode} />
+                <span className="slider"></span>
+              </label>
+              <span className="toggle-label" style={{ color: mode === 'presentation' ? 'var(--c-gold-dim)' : 'inherit', fontWeight: mode === 'presentation' ? 700 : 500 }}>Slaydlar</span>
+            </div>
           </nav>
         )}
 
         {/* Layout Mode Toggle */}
-        <div className="mode-switch-wrapper">
-          <span className="toggle-label" style={{ color: mode === 'landing' ? 'var(--color-accent)' : 'inherit', fontWeight: mode === 'landing' ? 700 : 500 }}>Sayt rejimi</span>
+        <div className="mode-switch-wrapper header-mode-switch">
+          <span className="toggle-label" style={{ color: mode === 'landing' ? 'var(--c-gold-dim)' : 'inherit', fontWeight: mode === 'landing' ? 700 : 500 }}>Sayt rejimi</span>
           <label className="switch">
             <input type="checkbox" checked={mode === 'presentation'} onChange={toggleMode} />
             <span className="slider"></span>
           </label>
-          <span className="toggle-label" style={{ color: mode === 'presentation' ? 'var(--color-accent)' : 'inherit', fontWeight: mode === 'presentation' ? 700 : 500 }}>Slaydlar</span>
+          <span className="toggle-label" style={{ color: mode === 'presentation' ? 'var(--c-gold-dim)' : 'inherit', fontWeight: mode === 'presentation' ? 700 : 500 }}>Slaydlar</span>
         </div>
 
         {mode === 'landing' && (
