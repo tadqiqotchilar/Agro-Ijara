@@ -124,7 +124,7 @@ export default function Header({ mode, setMode }) {
               Sorawlar
             </a>
             <div className="mode-switch-wrapper nav-mode-switch">
-              <span className="toggle-label" style={{ color: mode === 'landing' ? 'var(--c-gold-dim)' : 'inherit', fontWeight: mode === 'landing' ? 700 : 500 }}>Sayt rejimi</span>
+              <span className="toggle-label" style={{ color: mode === 'landing' ? 'var(--c-gold-dim)' : 'inherit', fontWeight: mode === 'landing' ? 700 : 500 }}>Sayt</span>
               <label className="switch">
                 <input type="checkbox" checked={mode === 'presentation'} onChange={toggleMode} />
                 <span className="slider"></span>
@@ -136,7 +136,7 @@ export default function Header({ mode, setMode }) {
 
         {/* Layout Mode Toggle */}
         <div className="mode-switch-wrapper header-mode-switch">
-          <span className="toggle-label" style={{ color: mode === 'landing' ? 'var(--c-gold-dim)' : 'inherit', fontWeight: mode === 'landing' ? 700 : 500 }}>Sayt rejimi</span>
+          <span className="toggle-label" style={{ color: mode === 'landing' ? 'var(--c-gold-dim)' : 'inherit', fontWeight: mode === 'landing' ? 700 : 500 }}>Sayt</span>
           <label className="switch">
             <input type="checkbox" checked={mode === 'presentation'} onChange={toggleMode} />
             <span className="slider"></span>
