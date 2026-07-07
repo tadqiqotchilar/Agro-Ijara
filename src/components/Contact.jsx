@@ -6,7 +6,7 @@ export default function Contact() {
     phone: '',
     message: ''
   });
-  const [status, setStatus] = useState('idle'); // idle, sending, success
+  const [status, setStatus] = useState('idle'); // idle, sending, success, error
   const [successMessageVisible, setSuccessMessageVisible] = useState(false);
 
   const handleChange = (e) => {
@@ -24,20 +24,31 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
-    
-    // Simulate API call
-    setTimeout(() => {
+
+    try {
+      const response = await fetch('/api/telegram', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Request failed');
+      }
+
       setStatus('success');
       setSuccessMessageVisible(true);
       setFormData({ name: '', phone: '', message: '' });
-    }, 1200);
+    } catch {
+      setStatus('error');
+    }
   };
 
   useEffect(() => {
-    if (status === 'success') {
+    if (status === 'success' || status === 'error') {
       const timer = setTimeout(() => {
         setSuccessMessageVisible(false);
         setStatus('idle');
@@ -122,6 +133,12 @@ export default function Contact() {
               {status === 'success' && successMessageVisible && (
                 <div className="form-message success" style={{ opacity: 1, transition: 'opacity 0.5s ease' }}>
                   Xabarıńız tabıslı jiberildi! Tez arada siz benen baylanısamız.
+                </div>
+              )}
+
+              {status === 'error' && (
+                <div className="form-message error" style={{ opacity: 1, transition: 'opacity 0.5s ease' }}>
+                  Qátelik júz berdi. Qaytadan urınıp kóriń.
                 </div>
               )}
             </form>
