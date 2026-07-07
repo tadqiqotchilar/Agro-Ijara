@@ -2,6 +2,7 @@ import React from 'react';
 import Market from './Market';
 import CommissionChart from './CommissionChart';
 import Contact from './Contact';
+import FAQ from './FAQ';
 
 export default function LandingPage({ onLearnMoreClick, onContactClick }) {
   return (
@@ -181,6 +182,9 @@ export default function LandingPage({ onLearnMoreClick, onContactClick }) {
 
       {/* Commission Chart Section */}
       <CommissionChart />
+
+      {/* FAQ Section */}
+      <FAQ />
 
       {/* Timeline/Roadmap Section */}
       <section id="timeline" className="timeline-section section-padding">

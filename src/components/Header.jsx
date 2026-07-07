@@ -16,7 +16,7 @@ export default function Header({ mode, setMode }) {
 
       if (mode === 'landing') {
         const scrollPosition = window.scrollY + 100;
-        const sections = ['hero', 'problems', 'solution', 'features', 'market', 'comparison', 'timeline', 'contact'];
+        const sections = ['hero', 'problems', 'solution', 'features', 'market', 'comparison', 'faq', 'timeline', 'contact'];
         
         for (const sectionId of sections) {
           const section = document.getElementById(sectionId);
@@ -108,6 +108,13 @@ export default function Header({ mode, setMode }) {
               onClick={(e) => { e.preventDefault(); handleNavClick('comparison'); }}
             >
               Salıstırıw
+            </a>
+            <a 
+              href="#faq" 
+              className={activeSection === 'faq' ? 'active' : ''} 
+              onClick={(e) => { e.preventDefault(); handleNavClick('faq'); }}
+            >
+              FAQ
             </a>
             <a 
               href="#timeline" 

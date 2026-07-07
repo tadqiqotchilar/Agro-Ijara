@@ -62,11 +62,11 @@ export default function Contact() {
               </li>
               <li>
                 <i className="fa-solid fa-envelope"></i>
-                <a href="mailto:startup@agroijara.uz">startup@agroijara.uz</a>
+                <a href="mailto:allanazarovmiyras07@gmail.com">allanazarovmiyras07@gmail.com</a>
               </li>
               <li>
                 <i className="fa-solid fa-phone"></i>
-                <a href="tel:+998901234567">+998 90 123 45 67</a>
+                <a href="tel:+998932291809">+998 93-229-18-09</a>
               </li>
             </ul>
           </div>

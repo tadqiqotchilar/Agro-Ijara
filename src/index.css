@@ -456,6 +456,92 @@ header.scrolled .menu-btn {
 }
 
 /* ============================================================
+   FAQ SECTION
+   ============================================================ */
+.faq-list {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: color-mix(in oklch, var(--c-bg-white) 85%, transparent);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--t-fast) var(--ease-smooth), transform var(--t-fast) var(--ease-smooth);
+}
+
+.faq-item.open {
+  border-color: color-mix(in oklch, var(--c-gold) 45%, var(--c-border));
+  transform: translateY(-2px);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.4rem;
+  color: var(--c-primary);
+  cursor: pointer;
+  font-weight: 600;
+  text-align: left;
+}
+
+.faq-question i {
+  color: var(--c-gold-dim);
+  transition: transform var(--t-fast) var(--ease-smooth);
+}
+
+.faq-item.open .faq-question i {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--t-mid) var(--ease-smooth), padding var(--t-mid) var(--ease-smooth);
+  padding: 0 1.4rem;
+}
+
+.faq-answer.open {
+  max-height: 220px;
+  padding: 0 1.4rem 1.2rem;
+}
+
+.faq-answer p {
+  color: var(--c-text-muted);
+}
+
+/* ============================================================
+   SCROLL TO TOP BUTTON
+   ============================================================ */
+.scroll-top-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--c-primary), var(--c-primary-mid));
+  color: var(--c-text-light);
+  box-shadow: var(--shadow-md);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 1200;
+  transition: transform var(--t-fast) var(--ease-spring), box-shadow var(--t-fast) var(--ease-smooth);
+}
+
+.scroll-top-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ============================================================
    HERO SECTION — Parallax + animated gradient mesh
    ============================================================ */
 .hero-section {
