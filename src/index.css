@@ -273,7 +273,7 @@ img {
    HEADER — glassmorphism + scrolled state
    ============================================================ */
 header {
-  position: fixed;
+  position: sticky;
   inset-block-start: 0;
   inset-inline: 0;
   z-index: 1000;
@@ -546,7 +546,7 @@ header.scrolled .menu-btn {
    ============================================================ */
 .hero-section {
   position: relative;
-  padding-block-start: 160px;
+  padding-block-start: 88px;
   padding-block-end: 120px;
   overflow: hidden;
   isolation: isolate;
@@ -590,6 +590,66 @@ header.scrolled .menu-btn {
 
   @keyframes hero-fade-out {
     to { opacity: 0.3; translate: 0 -30px; }
+  }
+}
+
+.announcement-banner {
+  background: linear-gradient(90deg, var(--c-primary), var(--c-primary-mid));
+  padding: var(--space-2) 0;
+}
+
+.announcement-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.announcement-text {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.announcement-text i {
+  color: var(--c-gold);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.announcement-text p {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: color-mix(in oklch, var(--c-text-light) 92%, transparent);
+}
+
+.announcement-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--c-gold);
+  color: var(--c-primary);
+  font-weight: 600;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background var(--t-fast) var(--ease-smooth);
+}
+
+.announcement-btn:hover {
+  background: var(--c-gold-light);
+}
+
+@media (max-width: 640px) {
+  .announcement-banner-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-2);
   }
 }
 

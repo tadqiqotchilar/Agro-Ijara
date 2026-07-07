@@ -56,8 +56,27 @@ function App() {
 
   return (
     <>
+      {mode === 'landing' && (
+        <div className="announcement-banner">
+          <div className="container announcement-banner-inner">
+            <div className="announcement-text">
+              <i className="fa-solid fa-bullhorn"></i>
+              <p>Жоқарғы Кеңестиң Start-up жойбарының 3-басқышы басланды: хар қала/районнан кеминде бир нақ ислеп турған проект киритилиуи керек.</p>
+            </div>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf_IAG-hFgViRXQ2AYYemwxIwo3rUVZBdi-SCNDAD-B7IgEfg/viewform?usp=dialog"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="announcement-btn"
+            >
+              Anketa <i className="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+      )}
+
       <Header mode={mode} setMode={setMode} />
-      
+
       {mode === 'landing' ? (
         <LandingPage 
           onLearnMoreClick={handleLearnMore} 
